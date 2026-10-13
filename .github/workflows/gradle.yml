@@ -55,9 +55,9 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build Docker image
-      run: docker build -t nameisanil/ani_docker:latest .
+      run: docker build -t nameisanil/ani_docker:java .
 
     - name: Push Docker image
       if: github.event_name == 'push'
-      run: docker push nameisanil/ani_docker:latest
+      run: docker push nameisanil/ani_docker:java
 
